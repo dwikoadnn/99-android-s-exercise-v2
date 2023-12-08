@@ -2,7 +2,7 @@ package co.ninetynine.android.exercisev2.ui
 
 import android.content.Intent
 import android.os.Bundle
-import co.ninetynine.android.exercisev2.BuildConfig
+import android.viewbinding.BuildConfig
 import co.ninetynine.android.exercisev2.constants.Constants
 import co.ninetynine.android.exercisev2.databinding.ActivityHomeBinding
 

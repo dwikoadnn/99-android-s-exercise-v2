@@ -5,6 +5,6 @@ import androidx.room.PrimaryKey
 
 @Entity
 class ListingItemEntity(
-    @PrimaryKey
-    var listingId: Int
+    @PrimaryKey(autoGenerate = true)
+    var listingId: Int = 0
 )

@@ -17,13 +17,13 @@ object RetrofitModule {
     @Singleton
     fun provideRetrofit(
         gsonConverterFactory: GsonConverterFactory
-    ) = Retrofit.Builder()
-        .addConverterFactory(gsonConverterFactory)
+    ): Retrofit = Retrofit.Builder()
         .baseUrl(Constants.BASE_URL)
+        .addConverterFactory(gsonConverterFactory)
         .build()
 
     @Provides
     @Singleton
-    fun provideGsonConverterFactory() = GsonConverterFactory.create()
+    fun provideGsonConverterFactory(): GsonConverterFactory = GsonConverterFactory.create()
 
 }

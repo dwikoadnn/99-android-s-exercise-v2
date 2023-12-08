@@ -12,15 +12,18 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class RoomModule {
+object RoomModule {
 
     @Provides
     @Singleton
     fun providesDatabase(
         @ApplicationContext context: Context
-    ) = Room.databaseBuilder(
+    ): AppDatabase = Room.databaseBuilder(
         context,
-        AppDatabase::class.java, "nn-exercise-database"
-    ).build()
+        AppDatabase::class.java,
+        "nn_exercise_database"
+    )
+        .fallbackToDestructiveMigration()
+        .build()
 
 }
